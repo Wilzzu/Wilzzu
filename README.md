@@ -1,5 +1,5 @@
 <div align="center">
-    <img height=155 width=817 align="center" src="https://raw.githubusercontent.com/Wilzzu/Wilzzu/refs/heads/main/assets/banner.png" />
+    <img height=153 width=817 align="center" src="https://raw.githubusercontent.com/Wilzzu/Wilzzu/refs/heads/main/assets/banner.png" />
 </div>
 
 <div align="center">
