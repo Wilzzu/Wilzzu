@@ -1,5 +1,5 @@
 <div align="center">
-    <img align="center" src="https://raw.githubusercontent.com/Wilzzu/Wilzzu/refs/heads/main/assets/banner.png" />
+    <img align="center" src="/assets/banner.png" />
 </div>
 
 <div align="center">
