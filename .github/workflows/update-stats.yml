@@ -1,0 +1,33 @@
+name: Update Github Stats SVGs
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-streak:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download Streak SVG
+        run: |
+          mkdir -p assets
+          curl "https://github-readme-streak-stats-rho-ivory.vercel.app?user=Wilzzu&theme=dark&hide_border=true&ring=FFA726&fire=FFA726&currStreakLabel=FFA726&card_height=200&card_width=448&border_radius=6" -o assets/streak.svg
+
+      - name: Download Top Languages SVG
+        run: |
+          curl "https://github-readme-stats-11c7.vercel.app/api/top-langs/?username=Wilzzu&layout=compact&hide_border=true&bg_color=151515&title_color=FFA726&text_color=FEFEFE&card_width=300&border_radius=5" -o assets/top-languages.svg
+          
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git commit -m "Update Github Stats SVGs [ci skip]" || echo "No changes to commit"
+          git push
