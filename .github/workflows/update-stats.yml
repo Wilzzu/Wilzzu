@@ -22,7 +22,7 @@ jobs:
 
       - name: Download Top Languages SVG
         run: |
-          curl "https://github-readme-stats-11c7.vercel.app/api/top-langs/?username=Wilzzu&layout=compact&hide_border=true&bg_color=151515&title_color=FFA726&text_color=FEFEFE&card_width=300&border_radius=5" -o assets/top-languages.svg
+          curl "https://github-readme-stats-11c7.vercel.app/api/top-langs/?username=Wilzzu&layout=compact&size_weight=0.5&count_weight=0.5&hide_border=true&bg_color=151515&title_color=FFA726&text_color=FEFEFE&card_width=300&border_radius=5" -o assets/top-languages.svg
           
       - name: Commit and push changes
         run: |
